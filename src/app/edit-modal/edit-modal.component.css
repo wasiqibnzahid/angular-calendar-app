@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  text-align: center;
+  padding-top: 1rem ;
+  font-size: 1.7rem;
+}
+form > .button-container {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem 0;
+
+}

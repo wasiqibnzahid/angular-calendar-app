@@ -1,0 +1,17 @@
+<div class="home-page-container">
+  <div class="appointment-container">
+    <div class="calendar-container">
+      <mat-card>
+        <mat-calendar [dateClass]="dateClass"></mat-calendar>
+      </mat-card>
+    </div>
+    <app-appointment-form (onSubmit)="handleFormSubmit($event)" />
+  </div>
+
+  <app-appointment-list-view
+    (deleteItem)="deleteItem($event)"
+    (handleItemDrop)="handleItemDrop($event)"
+    (ShowEditModal)="ShowEditModal($event)"
+    [appointments]="appointments"
+  />
+</div>

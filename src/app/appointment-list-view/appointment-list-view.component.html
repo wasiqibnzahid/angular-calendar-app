@@ -1,0 +1,42 @@
+<h2 (click)="handleClick()">Appointments:</h2>
+
+<ul
+  class="drag-drop-container"
+  cdkDropList
+  (cdkDropListDropped)="handleItemDrop.emit($event)"
+>
+  <li
+    class="drag-drop-box"
+    *ngFor="let appointment of appointments; index as i"
+    cdkDrag
+  >
+    <div><strong>Name:</strong> {{ appointment.name }}</div>
+    <div>
+      <strong>Date:</strong>
+      {{ appointment.date }}
+    </div>
+    <div><strong> Time:</strong> {{ appointment.time }}</div>
+    <div>
+      <button
+        (click)="ShowEditModal.emit({appointment, index: i})"
+        type="button"
+        mat-icon-button
+      >
+        <img
+          src="https://icons.veryicon.com/png/o/miscellaneous/linear-small-icon/edit-246.png"
+          alt="edit"
+        />
+      </button>
+      <button
+        (click)="deleteItem.emit({ index: i, name: appointment.name })"
+        type="button"
+        mat-icon-button
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3405/3405244.png"
+          alt="del"
+        />
+      </button>
+    </div>
+  </li>
+</ul>

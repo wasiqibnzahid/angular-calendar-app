@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.home-page-container {
+  padding-left: 2rem;
+  padding-top: 1rem;
+  width: 100%;
+  /* display: flex; */
+}
+
+
+.calendar-container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 400px;
+}
+
+.appointment-container {
+  display: flex;
+  padding-right: 2rem;
+  justify-content: space-evenly;
+}
